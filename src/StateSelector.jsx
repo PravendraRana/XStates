@@ -43,11 +43,10 @@ const StateSelector = () => {
             <h1>Select Location</h1>
             <Box display="flex" flexDirection="row" gap={2} p={2} maxWidth="100%" mx="auto" justifyContent="center">
                 <FormControl sx={{ minWidth: 250 }}>
-                    <InputLabel>Select Country</InputLabel>
                     <Select value={selectedCountry} onChange={(e) => setSelectedCountry(e.target.value)} displayEmpty>
-                        {/* <MenuItem value="" disabled>
+                        <MenuItem value="" disabled>
                             <em>Select Country</em>
-                        </MenuItem> */}
+                        </MenuItem>
                         {countries.map((country) => (
                             <MenuItem key={country} value={country}>{country}</MenuItem>
                         ))}
@@ -55,11 +54,10 @@ const StateSelector = () => {
                 </FormControl>
 
                 <FormControl sx={{ minWidth: 150 }} disabled={!selectedCountry}>
-                    <InputLabel>Select State</InputLabel>
                     <Select value={selectedState} onChange={(e) => setSelectedState(e.target.value)} displayEmpty>
-                        {/* <MenuItem value="" disabled>
+                        <MenuItem value="" disabled>
                             <em>Select State</em>
-                        </MenuItem> */}
+                        </MenuItem>
                         {states.map((state) => (
                             <MenuItem key={state} value={state}>{state}</MenuItem>
                         ))}
@@ -67,11 +65,10 @@ const StateSelector = () => {
                 </FormControl>
 
                 <FormControl sx={{ minWidth: 150 }} disabled={!selectedState}>
-                    <InputLabel>Select City</InputLabel>
                     <Select value={selectedCity} onChange={(e) => setSelectedCity(e.target.value)} displayEmpty>
-                        {/* <MenuItem value="" disabled>
+                        <MenuItem value="" disabled>
                             <em>Select City</em>        
-                        </MenuItem> */}
+                        </MenuItem>
                         {cities.map((city) => (
                             <MenuItem key={city} value={city}>{city}</MenuItem>
                         ))}
